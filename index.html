@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Registration</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="signup-card">
+    <header class="card-header">
+      <span class="badge">Portal</span>
+      <h1>Create Admin Account</h1>
+      <p>Enter your credentials to access the administrative dashboard.</p>
+    </header>
+
+    <form action="/signup" method="POST" class="form">
+      <div class="form-group">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Jane Doe" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Work Email</label>
+        <input type="email" id="email" name="email" placeholder="admin@organization.com" required>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" placeholder="••••••••" required>
+        </div>
+        <div class="form-group">
+          <label for="confirmPassword">Confirm</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" placeholder="••••••••" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="department">Role / Department</label>
+        <select id="department" name="department" required>
+          <option value="" disabled selected>Select department</option>
+          <option value="it">System Administrator</option>
+          <option value="security">Security & Compliance</option>
+          <option value="operations">Operations Management</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="adminKey">Admin Access Token</label>
+        <input type="password" id="adminKey" name="adminKey" placeholder="Authorization token or key" required>
+      </div>
+
+      <div class="form-footer">
+        <label class="terms-label">
+          <input type="checkbox" required>
+          <span>I agree to the internal security policy</span>
+        </label>
+      </div>
+
+      <button type="submit" class="submit-btn">Register Account</button>
+    </form>
+
+    <footer class="card-footer">
+      <p>Already have an account? <a href="#">Sign in</a></p>
+    </footer>
+  </main>
+
+<script src="app.js"></script>
+  
+</body>
+</html>
