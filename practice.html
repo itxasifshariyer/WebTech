@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <style>
+        .box {
+            border: 2px solid black;
+            padding: 15px;
+            width: 200px;
+        }
+        .login-btn {
+            background-color: blue;
+            color: white;
+            cursor: pointer;
+            border: none;
+            padding: 5px 10px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <h2>Login Portal</h2>
+        
+        <form>
+            <label for="role">Select Role:</label><br>
+            <select id="role">
+                <option value="admin">Admin</option>
+                <option value="customer">Customer</option>
+            </select><br><br>
+            
+            <label for="userid">User ID:</label><br>
+            <input type="text" id="userid" placeholder="Enter user ID"><br><br>
+            
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" placeholder="Enter Password"><br><br>
+            
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+    </div>
+
+</body>
+</html>

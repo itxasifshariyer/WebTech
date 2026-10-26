@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard Home - Computer Shop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 850px;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border: 2px solid black;
+            padding: 30px;
+            border-radius: 8px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-top: 0;
+        }
+        .welcome-text {
+            text-align: center;
+            color: #666;
+            margin-bottom: 25px;
+        }
+        /* Top Navigation Menu Bar */
+        .nav-menu {
+            display: flex;
+            justify-content: space-around;
+            background-color: #007bff;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .nav-menu a:hover {
+            text-decoration: underline;
+        }
+        /* Summary Cards Grid */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        .card {
+            background-color: #e9ecef;
+            border: 1px solid #ccc;
+            padding: 15px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .card h4 {
+            margin: 0 0 8px 0;
+            color: #555;
+            font-size: 14px;
+        }
+        .card p {
+            margin: 0;
+            font-size: 20px;
+            font-weight: bold;
+            color: #007bff;
+        }
+        /* Table Preview */
+        h3 {
+            font-size: 16px;
+            color: #333;
+            margin-top: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 25px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+            font-size: 13px;
+        }
+        th {
+            background-color: #343a40;
+            color: white;
+        }
+        /* Logout Button */
+        .logout-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 15px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+        }
+        .logout-btn:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Admin Dashboard Home</h2>
+        <p class="welcome-text">Welcome back, Admin! Here is your computer shop overview.</p>
+
+        <!-- Quick Navigation Bar with Settings Included -->
+        <div class="nav-menu">
+            <a href="dashboardhome.html">Dashboard Home</a>
+            <a href="employees.html">Manage Employees</a>
+            <a href="customers.html">Manage Customers</a>
+            <a href="reports.html">Sales Reports</a>
+            <a href="settings.html">Settings</a>
+        </div>
+
+        <!-- Summary KPI Cards -->
+        <div class="cards-grid">
+            <div class="card">
+                <h4>Total Stock Items</h4>
+                <p>150 Units</p>
+            </div>
+            <div class="card">
+                <h4>Active Customers</h4>
+                <p>32 Users</p>
+            </div>
+            <div class="card">
+                <h4>Pending Orders</h4>
+                <p>4 Orders</p>
+            </div>
+        </div>
+
+        <!-- Low Stock Alert Preview Table -->
+        <h3>Low Stock Alert Preview</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Component Name</th>
+                    <th>Category</th>
+                    <th>Remaining Stock</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>NVIDIA RTX 4070 GPU</td>
+                    <td>Graphics Card</td>
+                    <td style="color: red; font-weight: bold;">2 Units (Low)</td>
+                </tr>
+                <tr>
+                    <td>DDR5 32GB RAM Kit</td>
+                    <td>Memory</td>
+                    <td style="color: red; font-weight: bold;">3 Units (Low)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Log Out -->
+        <a href="fancy.html" class="logout-btn">Log Out</a>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Login Portal</title>
+    <style>
+        .box {
+            border: 2px solid black;
+            padding: 30px;
+            width: 300px;
+            margin: 50px auto;
+            font-family: Arial, sans-serif;
+        }
+        .box h2 {
+            text-align: center;
+            margin-top: 0;
+        }
+        .field {
+            margin-bottom: 15px;
+        }
+        .box input, .box select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+        .box button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .box button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <h2>Login Portal</h2>
+        
+     
+        <div class="field">
+            <label for="role">Select Role:</label>
+            <select id="role">
+                <option value="admin">Admin</option>
+                <option value="customer">Customer</option>
+            </select>
+        </div>
+
+       
+        <div class="field">
+            <label for="userid">User ID:</label>
+            <input type="text" id="userid" placeholder="Enter user ID">
+        </div>
+
+        <!-- Password textbox -->
+        <div class="field">
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Enter password">
+        </div>
+
+        <!-- Login button -->
+        <button type="button" onclick="handleLogin()">Login</button>
+    </div>
+
+    <!-- JavaScript to act as a temporary database -->
+    <script>
+        function handleLogin() {
+            // 1. Get the values the user typed/selected
+            const selectedRole = document.getElementById("role").value;
+            const enteredId = document.getElementById("userid").value;
+            const enteredPass = document.getElementById("password").value;
+
+            // 2. Hardcoded "Database" of allowed IDs and passwords
+            const database = {
+                admin: { id: "ADMIN123", pass: "adminpass" },
+                customer: { id: "CUST456", pass: "custpass" }
+            };
+
+            // 3. Check which role was selected and validate the credentials
+            if (selectedRole === "admin") {
+                if (enteredId === database.admin.id && enteredPass === database.admin.pass) {
+                    alert("Login Successful! Welcome Admin.");
+                   
+
+                    window.location.href = "dashboardhome.html";
+                } else {
+                    alert("Invalid Admin ID or Password!");
+                }
+            } 
+            else if (selectedRole === "customer") {
+                if (enteredId === database.customer.id && enteredPass === database.customer.pass) {
+                    alert("Login Successful! Welcome Customer.");
+                    // TODO: Later you can change this to redirect to your customer page:
+                    // window.location.href = "customer-dashboard.html";
+                } else {
+                    alert("Invalid Customer ID or Password!");
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>
+
+
